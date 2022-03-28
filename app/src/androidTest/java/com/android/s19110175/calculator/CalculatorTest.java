@@ -124,6 +124,27 @@ public class CalculatorTest extends TestCase {
         assertEquals(result, 0, 0d);
     }
 
+    //Case 6 : Subtraction with a negative float and zero
+    @Test
+    public void testSubFloatNegativeFloatAndZero(){
+        double result = calculator.subTwoNumbers(-3.4, 0);
+        assertEquals(result, -3.4, 0d);
+    }
+
+    //Case 7 : Subtraction with a positive float and zero
+    @Test
+    public void testSubFloatPosFloatAndZero(){
+        double result = calculator.subTwoNumbers(3.4, 0);
+        assertEquals(result, 3.4, 0d);
+    }
+
+    //Case 8 : Subtraction multiple float positive numbers and one negative number :
+    @Test
+    public void testSubMulFloatPositiveNumberAndNegativeNum(){
+        double result = calculator.subTwoNumbers(3 * (4) , -3);
+        assertEquals(result, 15, 0d);
+    }
+
     //-----------------(MULTIPLICATION)
 
     //Case 1 : Multiplication two positive integer
@@ -302,7 +323,7 @@ public class CalculatorTest extends TestCase {
         assertEquals(result, 0.92169084124, 1d);
     }
 
-    //Case 4 : Submit with base number a and log number x is same value
+    //Case 5 : Submit with base number a and log number x is same value
     @Test
     public void testLogNumAndBaseNumIsSame(){
         double result = calculator.logarithmNumber(4, 4);
