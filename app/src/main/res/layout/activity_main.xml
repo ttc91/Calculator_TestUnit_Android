@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
     tools:context=".LayoutActivity"
     android:orientation="vertical">
 
@@ -24,20 +25,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_add"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="add"
             android:text="ADD"/>
 
         <Button
             android:id="@+id/btn_sub"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="sub"
             android:layout_marginStart="20dp"
             android:text="SUB"/>
+
+        <Button
+            android:id="@+id/btn_exp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="exp"
+            android:layout_marginStart="20dp"
+            android:text="EXP"/>
+
+        <Button
+            android:id="@+id/btn_fact"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="fact"
+            android:layout_marginStart="20dp"
+            android:text="FACT"/>
 
     </LinearLayout>
 
@@ -45,21 +69,45 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_div"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="div"
             android:text="DIV"/>
 
         <Button
             android:id="@+id/btn_mul"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="mul"
             android:layout_marginStart="20dp"
             android:text="MUL"/>
+
+        <Button
+            android:id="@+id/btn_log"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="log"
+            android:layout_marginStart="20dp"
+            android:text="LOG"/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="0"
+        android:textSize="50sp"/>
 
 
 </LinearLayout>
